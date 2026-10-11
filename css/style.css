@@ -67,6 +67,67 @@ nav {
   letter-spacing: 2px;
   color: #111111;
 }
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+/* ---------- Circular Icon ---------- */
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+
+  border: 2px solid #eeeeee;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+
+  object-fit: contain;
+}
+
+/* ---------- Two-Line Name ---------- */
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.logo-name {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.logo-tagline {
+  margin-top: 0.3rem;
+
+  color: #555555;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
 
 /* ---------- Navigation Links ---------- */
 
