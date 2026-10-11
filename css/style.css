@@ -488,6 +488,64 @@ nav {
 
   font-size: 0.95rem;
 }
+
+/* ==================================================
+   PARTNERS SECTION
+   ================================================== */
+
+.partners {
+  padding: 7rem 5%;
+  background-color: #ffffff;
+}
+
+/* ---------- Partners Grid ---------- */
+
+.partners-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+/* ---------- Partner Card ---------- */
+
+.partner-card {
+  aspect-ratio: 3 / 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eeeeee;
+  border-top: 4px solid #c8102e;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.partner-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
 /* ==================================================
    GET A QUOTE CTA
    ================================================== */
@@ -956,6 +1014,12 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* ---------- Partners ---------- */
+
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   /* ---------- Products ---------- */
 
   .product-card {
@@ -1085,6 +1149,24 @@ footer {
   .steps-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  /* ---------- Partners ---------- */
+
+  .partners {
+    padding: 5rem 5%;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Center the last card, since 15 is an odd number */
+  .partner-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 0.5rem);
   }
 
   /* ---------- Quote CTA ---------- */
