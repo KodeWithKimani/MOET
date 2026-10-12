@@ -106,15 +106,22 @@
 }
 
 /* ---------- Insurance Grid ---------- */
-
 .insurance-grid {
+  --gap: 1.5rem;
+  --columns: 3;
+
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.insurance-card {
+  width: calc((100% - (var(--columns) - 1) * var(--gap)) / var(--columns));
 }
 
 /* ---------- Insurance Cards ---------- */
