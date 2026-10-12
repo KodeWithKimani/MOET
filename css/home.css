@@ -581,7 +581,7 @@
 
 @media (max-width: 900px) {
   .insurance-grid {
-    grid-template-columns: repeat(2, 1fr);
+    --columns: 2;
   }
 
   .why-moet-grid {
@@ -639,7 +639,7 @@
   }
 
   .insurance-grid {
-    grid-template-columns: 1fr;
+    --columns: 1;
   }
 
   /* Why Moet */
