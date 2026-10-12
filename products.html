@@ -7,7 +7,9 @@
     <title>Insurance Products | Moet Insurance Agency</title>
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/products.css" />
 
     <link rel="icon" type="image/webp" href="assets/moet.webp" />
     <link rel="apple-touch-icon" href="assets/moet.webp" />
@@ -40,7 +42,17 @@
       <nav>
         <!-- Logo -->
         <div class="logo">
-          <a href="index.html">MOET</a>
+          <a href="index.html" aria-label="Moet Insurance Agency">
+            <span class="logo-icon">
+              <img src="assets/moet.webp" alt="Moet Insurance Agency" />
+            </span>
+            <span class="logo-text">
+              <span class="logo-name">
+                <span>M</span><span>O</span><span>E</span><span>T</span>
+              </span>
+              <span class="logo-tagline">Insurance Agency</span>
+            </span>
+          </a>
         </div>
 
         <!-- Navigation Links -->
@@ -48,13 +60,13 @@
           <a href="index.html#home">Home</a>
           <a href="index.html#about">About</a>
           <a href="index.html#insurance">Insurance</a>
-          <a href="index.html#why-moet">Why Moet</a>
+          <a href="index.html#why-moet">Why Us</a>
           <a href="index.html#contact">Contact</a>
         </div>
 
         <!-- Get a Quote Button -->
         <div class="nav-cta">
-          <a href="#quote">Get a Quote</a>
+          <a href="#medical">Get a Quote</a>
         </div>
       </nav>
     </header>
@@ -75,6 +87,94 @@
         </div>
       </section>
 
+      <!-- ==================== MEDICAL INSURANCE ==================== -->
+
+      <section id="medical" class="product-category">
+        <div class="product-category-heading">
+          <p class="section-label">MEDICAL INSURANCE</p>
+
+          <h2>Medical Insurance</h2>
+
+          <p>
+            Medical insurance solutions designed to help provide access to
+            healthcare and financial protection when it matters.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <div class="product-card info-card">
+            <h3>Individual &amp; Family Medical Cover</h3>
+            <p>
+              Medical cover designed to provide protection for individuals and
+              families.
+            </p>
+          </div>
+
+          <div class="product-card info-card">
+            <h3>Group &amp; Corporate Medical Schemes</h3>
+            <p>
+              Medical insurance solutions designed for groups, organizations,
+              and corporate teams.
+            </p>
+          </div>
+
+          <div class="product-card info-card">
+            <h3>Inpatient &amp; Outpatient Cover</h3>
+            <p>
+              Medical protection covering eligible inpatient and outpatient
+              healthcare needs.
+            </p>
+          </div>
+
+          <div class="product-card info-card">
+            <h3>Maternity Cover</h3>
+            <p>
+              Medical cover designed to support eligible maternity and related
+              healthcare needs.
+            </p>
+          </div>
+
+          <div class="product-card info-card">
+            <h3>Chronic Illness Cover</h3>
+            <p>
+              Medical protection designed to provide support for eligible
+              chronic healthcare needs.
+            </p>
+          </div>
+
+          <div class="product-card info-card">
+            <h3>Personal Accident Cover</h3>
+            <p>
+              Protection designed to provide financial support following covered
+              personal accidents.
+            </p>
+          </div>
+
+          <div class="product-card info-card">
+            <h3>Dental &amp; Optical Cover</h3>
+            <p>
+              Medical cover designed to support eligible dental and optical
+              healthcare needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Single quote button for the whole Medical category -->
+        <div class="category-cta">
+          <a
+            href="https://new.aar-insurance.com/medical"
+            class="btn btn-primary quote-btn"
+            data-category="medical"
+            data-underwriter="aar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get a Medical Quote
+          </a>
+        </div>
+      </section>
+
+      
       <!-- ==================== GENERAL INSURANCE ==================== -->
 
       <section id="general" class="product-category">
@@ -228,93 +328,6 @@
             <h3>Group Life Cover</h3>
             <p>
               Life insurance protection designed for groups and organizations.
-            </p>
-            <a href="#" class="product-quote"> Get a Quote </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==================== MEDICAL INSURANCE ==================== -->
-
-      <section id="medical" class="product-category">
-        <div class="product-category-heading">
-          <p class="section-label">MEDICAL INSURANCE</p>
-
-          <h2>Medical Insurance</h2>
-
-          <p>
-            Medical insurance solutions designed to help provide access to
-            healthcare and financial protection when it matters.
-          </p>
-        </div>
-
-        <div class="product-grid">
-          <!-- Individual & Family -->
-          <div class="product-card">
-            <h3>Individual &amp; Family Medical Cover</h3>
-            <p>
-              Medical cover designed to provide protection for individuals and
-              families.
-            </p>
-            <a href="#" class="product-quote"> Get a Quote </a>
-          </div>
-
-          <!-- Group & Corporate -->
-          <div class="product-card">
-            <h3>Group &amp; Corporate Medical Schemes</h3>
-            <p>
-              Medical insurance solutions designed for groups, organizations,
-              and corporate teams.
-            </p>
-            <a href="#" class="product-quote"> Get a Quote </a>
-          </div>
-
-          <!-- Inpatient & Outpatient -->
-          <div class="product-card">
-            <h3>Inpatient &amp; Outpatient Cover</h3>
-            <p>
-              Medical protection covering eligible inpatient and outpatient
-              healthcare needs.
-            </p>
-            <a href="#" class="product-quote"> Get a Quote </a>
-          </div>
-
-          <!-- Maternity -->
-          <div class="product-card">
-            <h3>Maternity Cover</h3>
-            <p>
-              Medical cover designed to support eligible maternity and related
-              healthcare needs.
-            </p>
-            <a href="#" class="product-quote"> Get a Quote </a>
-          </div>
-
-          <!-- Chronic Illness -->
-          <div class="product-card">
-            <h3>Chronic Illness Cover</h3>
-            <p>
-              Medical protection designed to provide support for eligible
-              chronic healthcare needs.
-            </p>
-            <a href="#" class="product-quote"> Get a Quote </a>
-          </div>
-
-          <!-- Personal Accident -->
-          <div class="product-card">
-            <h3>Personal Accident Cover</h3>
-            <p>
-              Protection designed to provide financial support following covered
-              personal accidents.
-            </p>
-            <a href="#" class="product-quote"> Get a Quote </a>
-          </div>
-
-          <!-- Dental & Optical -->
-          <div class="product-card">
-            <h3>Dental &amp; Optical Cover</h3>
-            <p>
-              Medical cover designed to support eligible dental and optical
-              healthcare needs.
             </p>
             <a href="#" class="product-quote"> Get a Quote </a>
           </div>

@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base page styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  line-height: 1.6;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Keep the main content from becoming too wide */
+section {
+  width: 100%;
+}
+
+/* ==================================================
+   NAVBAR
+   ================================================== */
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+nav {
+  width: 90%;
+  max-width: 1200px;
+  min-height: 80px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------- Logo ---------- */
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #111111;
+}
+
+/* ---------- Circular Icon ---------- */
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+
+  border: 2px solid #eeeeee;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+
+  object-fit: contain;
+}
+
+/* ---------- Two-Line Name ---------- */
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.logo-name {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.logo-tagline {
+  margin-top: 0.3rem;
+
+  color: #555555;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* ---------- Navigation Links ---------- */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222222;
+
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c8102e;
+}
+
+/* ---------- Get a Quote Button (navbar) ---------- */
+
+.nav-cta a {
+  display: inline-block;
+
+  padding: 0.75rem 1.4rem;
+
+  background-color: #c8102e;
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  border-radius: 4px;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-cta a:hover {
+  background-color: #a50d25;
+  transform: translateY(-2px);
+}
+
+/* ==================================================
+   BUTTONS
+   ================================================== */
+
+.btn {
+  display: inline-block;
+
+  padding: 0.85rem 1.6rem;
+
+  border-radius: 4px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Primary Button */
+
+.btn-primary {
+  background-color: #c8102e;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #a50d25;
+  transform: translateY(-2px);
+}
+
+/* Secondary Button */
+
+.btn-secondary {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #ffffff;
+  color: #111111;
+  transform: translateY(-2px);
+}
+
+/* ==================================================
+   SECTION LABEL & SECTION HEADING
+   ================================================== */
+
+.section-label {
+  margin-bottom: 0.8rem;
+
+  color: #c8102e;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 750px;
+  margin: 0 auto 4rem;
+
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin-bottom: 1rem;
+
+  color: #111111;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.section-heading > p:not(.section-label) {
+  color: #666666;
+  font-size: 1.05rem;
+}
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+footer {
+  padding: 4rem 5% 0;
+
+  background-color: #111111;
+  color: #ffffff;
+}
+
+/* ---------- Footer Content ---------- */
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+
+  padding-bottom: 3rem;
+}
+
+/* ---------- Company ---------- */
+
+.footer-company h2 {
+  margin-bottom: 0.8rem;
+
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.footer-company p {
+  color: #aaaaaa;
+
+  font-size: 0.95rem;
+}
+
+/* ---------- Footer Headings ---------- */
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 1.2rem;
+
+  font-size: 1rem;
+}
+
+/* ---------- Footer Links ---------- */
+
+.footer-links,
+.footer-contact,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-social a {
+  color: #aaaaaa;
+
+  font-size: 0.9rem;
+
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-social a:hover {
+  color: #ffffff;
+}
+
+/* ---------- Footer Bottom ---------- */
+
+.footer-bottom {
+  padding: 1.5rem 0;
+
+  border-top: 1px solid #333333;
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #777777;
+
+  font-size: 0.8rem;
+}
+
+/* ==================================================
+   RESPONSIVE: TABLETS
+   ================================================== */
+
+@media (max-width: 900px) {
+  /* Navbar */
+  .nav-links {
+    gap: 1rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==================================================
+   RESPONSIVE: MOBILE PHONES
+   ================================================== */
+
+@media (max-width: 600px) {
+  /* Navbar */
+  nav {
+    width: 90%;
+    min-height: auto;
+
+    padding: 1.2rem 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .nav-cta {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  /* Section headings */
+  .section-heading {
+    margin-bottom: 3rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 3rem 5% 0;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

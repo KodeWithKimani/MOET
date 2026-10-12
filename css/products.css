@@ -1,0 +1,203 @@
+.products-intro {
+  padding: 7rem 5%;
+
+  background-color: #111111;
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.products-intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.products-intro h1 {
+  margin-bottom: 1.2rem;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.products-intro p:not(.section-label) {
+  color: #cccccc;
+
+  font-size: 1.05rem;
+}
+
+/* ==================================================
+   PRODUCT CATEGORY
+   ================================================== */
+
+.product-category {
+  padding: 7rem 5%;
+
+  background-color: #ffffff;
+}
+
+/* Alternate the background of every second section */
+.product-category:nth-of-type(even) {
+  background-color: #f7f7f7;
+}
+
+/* ---------- Category Heading ---------- */
+
+.product-category-heading {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto 4rem;
+
+  text-align: center;
+}
+
+.product-category-heading h2 {
+  margin-bottom: 1rem;
+
+  color: #111111;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.product-category-heading p:not(.section-label) {
+  color: #666666;
+
+  font-size: 1.05rem;
+}
+
+/* ==================================================
+   PRODUCT GRID & CARDS
+   ================================================== */
+
+/* Flex (not grid) so an incomplete last row stays centred */
+.product-grid {
+  --gap: 1.5rem;
+  --columns: 3;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.product-card {
+  width: calc((100% - (var(--columns) - 1) * var(--gap)) / var(--columns));
+
+  padding: 2rem;
+
+  background-color: #ffffff;
+
+  border-top: 4px solid #c8102e;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h3 {
+  margin-bottom: 1rem;
+
+  color: #111111;
+
+  font-size: 1.25rem;
+}
+
+.product-card p {
+  margin-bottom: 1.5rem;
+
+  color: #666666;
+
+  font-size: 0.95rem;
+}
+
+/* ---------- Card with its own quote link ---------- */
+
+.product-quote {
+  margin-top: auto;
+
+  color: #c8102e;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition: color 0.3s ease;
+}
+
+.product-quote:hover {
+  color: #111111;
+}
+
+/* ---------- Info-only card (no link, so no hover lift) ---------- */
+
+.info-card:hover {
+  transform: none;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================================================
+   CATEGORY QUOTE CTA
+   One button per category, placed below the grid
+   ================================================== */
+
+.category-cta {
+  max-width: 750px;
+  margin: 3rem auto 0;
+
+  text-align: center;
+}
+
+.category-cta p {
+  margin-bottom: 1.5rem;
+
+  color: #666666;
+
+  font-size: 1.05rem;
+}
+
+/* ==================================================
+   RESPONSIVE: TABLETS
+   ================================================== */
+
+@media (max-width: 900px) {
+  .product-grid {
+    --columns: 2;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE: MOBILE PHONES
+   ================================================== */
+
+@media (max-width: 600px) {
+  .products-intro {
+    padding: 5rem 5%;
+  }
+
+  .product-category {
+    padding: 5rem 5%;
+  }
+
+  .product-grid {
+    --columns: 1;
+  }
+}
