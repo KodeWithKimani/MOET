@@ -127,34 +127,97 @@
 /* ---------- Insurance Cards ---------- */
 
 .insurance-card {
-  padding: 2rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
 
   background-color: #ffffff;
 
-  border-top: 4px solid #c8102e;
+  border-radius: 16px;
 
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Red accent bar that slides in along the bottom on hover */
+.insurance-card::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background-color: #c8102e;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
 }
 
 .insurance-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
 }
 
-.insurance-card h3 {
-  margin-bottom: 1rem;
+.insurance-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Card Image ---------- */
+
+.card-image {
+  aspect-ratio: 3 / 2;
+
+  overflow: hidden;
+
+  /* Shows while the image is empty or loading */
+  background-color: #e9e9e9;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.insurance-card:hover .card-image img {
+  transform: scale(1.07);
+}
+
+/* ---------- Card Body ---------- */
+
+.card-body {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.75rem 2rem 2rem;
+}
+
+.card-body h3 {
+  margin-bottom: 0.8rem;
 
   color: #111111;
 
   font-size: 1.35rem;
 }
 
-.insurance-card p {
+.card-body p {
   margin-bottom: 1.5rem;
 
   color: #666666;
@@ -162,9 +225,12 @@
   font-size: 0.95rem;
 }
 
-/* ---------- Learn More Link ---------- */
+/* ---------- Learn More Link (pinned to the bottom) ---------- */
 
-.insurance-card a {
+.card-link {
+  margin-top: auto;
+  align-self: flex-start;
+
   color: #c8102e;
 
   font-size: 0.9rem;
@@ -173,7 +239,20 @@
   transition: color 0.3s ease;
 }
 
-.insurance-card a:hover {
+.card-link::after {
+  content: "\2192";
+
+  display: inline-block;
+  margin-left: 0.4rem;
+
+  transition: transform 0.3s ease;
+}
+
+.insurance-card:hover .card-link::after {
+  transform: translateX(5px);
+}
+
+.card-link:hover {
   color: #111111;
 }
 
