@@ -290,6 +290,20 @@ footer {
   font-size: 0.95rem;
 }
 
+/* ---------- Footer Logo ---------- */
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo img {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  margin-left: -14px;
+}
+
 /* ---------- Footer Headings ---------- */
 
 .footer-links h3,
@@ -414,5 +428,10 @@ footer {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .footer-logo img {
+    width: 180px;
+    margin-left: -11px;
   }
 }

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="preload" as="image" href="assets/hero.webp" />
 
     <link rel="icon" type="image/webp" href="assets/moet.webp" />
     <link rel="apple-touch-icon" href="assets/moet.webp" />
@@ -642,7 +643,19 @@
       <div class="footer-content">
         <!-- Company -->
         <div class="footer-company">
-          <h2>MOET</h2>
+          <a
+            href="index.html"
+            class="footer-logo"
+            aria-label="Moet Insurance Agency"
+          >
+            <img
+              src="assets/logo.webp"
+              alt="Moet Insurance Agency"
+              width="480"
+              height="220"
+              loading="lazy"
+            />
+          </a>
 
           <p>Protection meets purpose.</p>
         </div>
