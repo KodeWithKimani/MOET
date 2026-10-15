@@ -6,8 +6,15 @@
  *   data-track="product_card_click"   Interest: Learn More cards on the homepage
  *   data-track="quote_click"          Intent:   quote buttons on the products page
  *
- *   data-product="medical"            Product slug (same as the section id on products.html)
+ *   data-product="medical"            Product slug
+ *   data-category="medical-insurance" Category slug (quote buttons)
  *   data-underwriter="aar"            Optional, sent as-is when present
+ *
+ * Each click is sent to GA4 with these parameters:
+ *   product       slug, e.g. "motor-vehicle"
+ *   product_name  readable name taken from the card title, e.g. "Motor Vehicle Insurance"
+ *   category      category slug, e.g. "general-insurance"
+ *   underwriter   "aar" or "whatsapp" (when present)
  *
  * Adding a new policy needs no JavaScript changes: put the same
  * data attributes on its card and quote button.
@@ -19,11 +26,23 @@
     var el = event.target.closest("[data-track]");
     if (!el) return;
 
+    // Readable name: the title (h3) of the card the clicked link sits in
+    var card = el.closest(".sub-card, .insurance-card");
+    var titleEl = card ? card.querySelector("h3") : null;
+    var productName = titleEl ? titleEl.textContent.trim() : "";
+
+    var slug = el.dataset.product || el.dataset.category || "unknown";
+
     var params = {
-      product: el.dataset.product || el.dataset.category || "unknown",
+      product: slug,
+      product_name: productName || slug,
       // "beacon" lets the hit survive same-tab navigation (homepage -> products page)
       transport_type: "beacon",
     };
+
+    if (el.dataset.category) {
+      params.category = el.dataset.category;
+    }
 
     if (el.dataset.underwriter) {
       params.underwriter = el.dataset.underwriter;
